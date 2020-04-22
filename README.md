@@ -45,20 +45,19 @@ Things you may want to cover:
 
 ### Association
 - has_many :posts
-- belongs_to :group through: :groups_users
+- has_many :group through: :groups_users
+- has_many :groups_users
 
-
-## groupテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |groupname|string|null: false|
-|edit|string||
 |user_id|integer|unique: true|
 
 ### Association
-- belongs_to :groups_users
-- belongs_to :user, through: :groups_users
+- has_many :groups_users
+- has_many :user, through: :groups_users
 
 
 ## postsテーブル
