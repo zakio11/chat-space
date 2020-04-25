@@ -1,0 +1,21 @@
+.chat-side
+  .side-top
+    .side-top__items
+      %p.side-top__items__name
+        ざきお
+      %ul.side-top__items__menu
+        %li.side-top__items__menu__new-group
+          = link_to "#" do
+            = icon('fas', 'edit')
+        %li.side-top__items__menu__edit-user
+          = link_to "#" do
+            = icon('fas', 'cog')
+
+  .side-bar
+    -# .group
+    = link_to "#", class:"group" do
+      %p.side-bar__group-name
+        部門
+      %p.side-bar__message
+        営業
+
