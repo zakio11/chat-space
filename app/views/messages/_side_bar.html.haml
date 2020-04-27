@@ -5,17 +5,18 @@
         = current_user.name
       %ul.side-top__items__menu
         %li.side-top__items__menu__new-group
-          = link_to "#" do
+          = link_to new_group_path do
             = icon('fas', 'edit')
         %li.side-top__items__menu__edit-user
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
 
   .side-bar
-    -# .group
-    = link_to "#", class:"group" do
-      %p.side-bar__group-name
-        部門
-      %p.side-bar__message
-        営業
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#", class:"group" do
+          %p.side-bar__group-name
+            = group.name
+          %p.side-bar__message
+            メッセージはまだありません。
 
