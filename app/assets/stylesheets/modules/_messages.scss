@@ -101,6 +101,7 @@
 
   
   .chat-main__message {
+    overflow: scroll;
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     padding: 45px 40px;
@@ -137,13 +138,12 @@
     padding: 20px 40px;
     display: flex;
     .input-box {
-      border-style: none;
-      display: flex;
       width: 100%;
       background-color: white;
       position: relative;
       &__text {
-      display: flex;
+      height: 50px;
+      width: 100%;
       padding: 0 40px 0 10px;
       border-style: none;
       color: #434a54;
@@ -160,9 +160,12 @@
       }
     }
     .submit-btn {
+      width: 100px;
+      height: 50px;
       padding: 0 30px;
       color: white;
       margin-left: 15px;
+      cursor: pointer;
       background-color: #38aef3; 
       line-height: 50px;
     }
